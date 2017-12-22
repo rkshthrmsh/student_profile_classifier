@@ -28,3 +28,11 @@ This project aims to help students self-evaluate their SoPs for the particular p
        Simplified Profile 1 vector: `[0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1]` <-- based on the words present in Simplified Profile 1  
        Simplified Profile 2 vector: `[1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0]`
      - Storing: The vectors are stored in _vector_file.txt_.
+  4. __Binary Vectors to Labelled Data__: Each line in _vector_file.txt_ which contains a binary vector of profiles is converted into labelled data matrix for a neural network. The labelled data contains both input features and labels.
+  5. __Neural Network__:
+     - Random Selection: Training (90%), Cross-Validation (5%), and Test (5%) Samples are randomly selected.
+     - Neural Network Structure: Hidden layers and corresponding parameters are generated in `tensorflow`.
+     - Cross-Validation: Tensorflow model is trained to evaluate cross-validation error.
+     - Testing: Tensorflow model is trained to evaluate test error.
+## User Profile
+Once the neural network is satisfactorily trained, the user profile is added to _profile.txt_. This file under goes the steps mentioned in __Method__, above and the probability of it being a positive profile is returned.
